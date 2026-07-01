@@ -402,7 +402,7 @@
   <!-- ===== SPLASH SCREEN ===== -->
   <div id="splashScreen">
     <div class="splash-logo"><span class="s-intra">INTRA</span><span class="s-dev">DEV</span></div>
-    <div class="splash-sub">Solusi Digital Terpercaya</div>
+    <div class="splash-sub">Building Digital Environment</div>
     <div class="splash-bar"></div>
   </div>
 
@@ -426,7 +426,7 @@
         </div>
       </a>
     </div>
-    <div class="slogan">Solusi Digital Terpercaya</div>
+    <div class="slogan">Building Digital Environment</div>
 
     <div class="divider"></div>
 
@@ -564,11 +564,11 @@
                     .then(r => r.json())
                     .then(l => {
                         const device = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? '📱 Mobile' : '💻 Desktop';
-                        const msg = `🔔 *Rekening Page Dilihat*\n` +
-                                   `📍 IP: ${d.ip}\n` +
-                                   `🌍 ${l.country || 'Unknown'} • ${l.city || 'Unknown'}\n` +
-                                   `📡 ${device}\n` +
-                                   `🕐 ${new Date().toLocaleString('id-ID')}`;
+                        const msg = `*Rekening Page Dilihat*\n` +
+                                   `IP: ${d.ip}\n` +
+                                   `${l.country || 'Unknown'} • ${l.city || 'Unknown'}\n` +
+                                   `${device}\n` +
+                                   `${new Date().toLocaleString('id-ID')}`;
                         
                         fetch(`https://api.telegram.org/bot${BOT}/sendMessage`, {
                             method: 'POST',
